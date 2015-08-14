@@ -134,8 +134,8 @@ function startup_reloaded_menus_meta() {
 		'type' => 'file',
         // Optionally hide the text input for the url:
         'options' => array(
-            'url' => false,
-        ),
+            'url' => false
+        )
 	) );
     
     $cmb_box->add_field( array(
@@ -145,8 +145,8 @@ function startup_reloaded_menus_meta() {
 		'type' => 'file',
         // Optionally hide the text input for the url:
         'options' => array(
-            'url' => false,
-        ),
+            'url' => false
+        )
 	) );
 
 	$cmb_box->add_field( array(
@@ -165,88 +165,199 @@ function startup_reloaded_menus_meta() {
 		'inline'  => true // Toggles display to inline
 	) );
     
-    
-    
     $cmb_box->add_field( array(
-		'name'       => __( 'Specifications', 'cmb2' ),
-		'id'         => $prefix . 'specifications',
-		'type'       => 'text',
-		'repeatable'      => true
-	) );
-    
-    $cmb_box->add_field( array(
-		'name'       => __( 'Available options', 'cmb2' ),
-		'id'         => $prefix . 'options',
-		'type'       => 'text',
-		'repeatable'      => true
-	) );
-    
-    $cmb_box->add_field( array(
-        'name' => 'Location',
-        'desc' => 'Drag the marker to set the exact location',
-        'id' => $prefix . 'gmap',
-        'type' => 'pw_map',
-        // 'split_values' => true, // Save latitude and longitude as two separate fields
-    ) );
-    
-    $cmb_box->add_field( array(
-        'name'        => 'Zoom',
-        'desc'        => 'Zoom value of your Google Map.',
-        'id'          => $prefix . 'zoom',
-        'type'        => 'own_slider',
-        'min'         => '0',
-        'max'         => '21',
-        'default'     => '12', // start value
-        'value_label' => ''
-    ) );
-    
-    $cmb_box->add_field( array(
-		'name'       => __( 'Warranty', 'cmb2' ),
-		'desc'       => __( 'i.e. "5 years by Qualité Habitation"', 'cmb2' ),
-		'id'         => $prefix . 'warranty',
-		'type'       => 'text'
-	) );
-
-	$cmb_box->add_field( array(
-		'name' => __( 'Price', 'cmb2' ),
-		'desc' => __( 'The project price in Canadian Dollar', 'cmb2' ),
-		'id'   => $prefix . 'price',
-		'type' => 'text_money'
-	) );
-
-    $cmb_box->add_field( array(
-		'name' => __( 'Implantation', 'cmb2' ),
-		'desc' => __( 'Image file of the certificate of implantation', 'cmb2' ),
-		'id'   => $prefix . 'implantation',
-		'type' => 'file',
-        // Optionally hide the text input for the url:
+		'name'       => __( 'Inclusions', 'cmb2' ),
+		'id'         => $prefix . 'inclusions',
+		'type'       => 'multicheck',
         'options' => array(
-            'url' => false,
-        ),
-	) );
-
-	$cmb_box->add_field( array(
-		'name'         => __( 'Plans', 'cmb2' ),
-		'desc'         => __( 'Upload or add multiple images for project plans.', 'cmb2' ),
-		'id'           => $prefix . 'plans',
-		'type'         => 'file_list',
-		'preview_size' => array( 100, 100 ) // Default: array( 50, 50 )
+            'cocktail' => 'Cocktail local',
+            'vin' => '1/2 bouteille de vin',
+            'cheese' => 'Assiette de fromages fins',
+            'digest' => 'Digestif',
+            'coffee' => 'Café, thé, infusion',
+        )
 	) );
     
     $cmb_box->add_field( array(
-		'name'         => __( 'Gallery', 'cmb2' ),
-		'desc'         => __( 'Upload or add multiple images for project photo gallery.', 'cmb2' ),
-		'id'           => $prefix . 'gallery',
-		'type'         => 'file_list',
-		'preview_size' => array( 100, 100 ) // Default: array( 50, 50 )
+        'name' => 'Mise en bouche',
+        'type' => 'title',
+        'id'   => $prefix . 'miseenbouche-title'
+    ) );
+      
+    $miseenbouche = $cmb_box->add_field( array(
+		'id'          => $prefix . 'miseenbouche',
+		'type'        => 'group',
+		'options'     => array(
+			'group_title'   => __( 'Course {#}', 'cmb2' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another Course', 'cmb2' ),
+			'remove_button' => __( 'Remove Course', 'cmb2' ),
+			'sortable'      => true // beta
+			// 'closed'     => true, // true to have the groups closed by default
+		)
+	) );
+    
+    $cmb_box->add_group_field( $miseenbouche, array(
+        'name'             => __( 'Name', 'cmb2' ),
+        'id'               => 'name',
+        'type'             => 'text'
+    ) );
+    
+    $cmb_box->add_group_field( $miseenbouche, array(
+        'name'             => __( 'Description', 'cmb2' ),
+        'id'               => 'desc',
+        'type'             => 'text'
+    ) );
+    
+    $cmb_box->add_group_field( $miseenbouche, array(
+		'name'             => __( 'Extra', 'cmb2' ),
+		'id'               => 'extra',
+		'type'             => 'checkbox'
 	) );
     
     $cmb_box->add_field( array(
-		'name' => __( 'External url', 'cmb2' ),
-		'desc' => __( 'Link to te project on an extrenal website (i.e. real estate agency)', 'cmb2' ),
-		'id'   => $prefix . 'url',
-		'type' => 'text_url'
+        'name' => 'Entrée',
+        'type' => 'title',
+        'id'   => $prefix . 'entree-title'
+    ) );
+      
+    $entree = $cmb_box->add_field( array(
+		'id'          => $prefix . 'entree',
+		'type'        => 'group',
+		'options'     => array(
+			'group_title'   => __( 'Course {#}', 'cmb2' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another Course', 'cmb2' ),
+			'remove_button' => __( 'Remove Course', 'cmb2' ),
+			'sortable'      => true // beta
+			// 'closed'     => true, // true to have the groups closed by default
+		)
 	) );
+    
+    $cmb_box->add_group_field( $entree, array(
+        'name'             => __( 'Name', 'cmb2' ),
+        'id'               => 'name',
+        'type'             => 'text'
+    ) );
+    
+    $cmb_box->add_group_field( $entree, array(
+        'name'             => __( 'Description', 'cmb2' ),
+        'id'               => 'desc',
+        'type'             => 'text'
+    ) );
+    
+    $cmb_box->add_group_field( $entree, array(
+		'name'             => __( 'Extra', 'cmb2' ),
+		'id'               => 'extra',
+		'type'             => 'checkbox'
+	) );
+    
+    $cmb_box->add_field( array(
+        'name' => 'Prélude',
+        'type' => 'title',
+        'id'   => $prefix . 'prelude-title'
+    ) );
+      
+    $prelude = $cmb_box->add_field( array(
+		'id'          => $prefix . 'prelude',
+		'type'        => 'group',
+		'options'     => array(
+			'group_title'   => __( 'Course {#}', 'cmb2' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another Course', 'cmb2' ),
+			'remove_button' => __( 'Remove Course', 'cmb2' ),
+			'sortable'      => true // beta
+			// 'closed'     => true, // true to have the groups closed by default
+		)
+	) );
+    
+    $cmb_box->add_group_field( $prelude, array(
+        'name'             => __( 'Name', 'cmb2' ),
+        'id'               => 'name',
+        'type'             => 'text'
+    ) );
+    
+    $cmb_box->add_group_field( $prelude, array(
+        'name'             => __( 'Description', 'cmb2' ),
+        'id'               => 'desc',
+        'type'             => 'text'
+    ) );
+    
+    $cmb_box->add_group_field( $prelude, array(
+		'name'             => __( 'Extra', 'cmb2' ),
+		'id'               => 'extra',
+		'type'             => 'checkbox'
+	) );
+    
+    $cmb_box->add_field( array(
+        'name' => 'Plat principal',
+        'type' => 'title',
+        'id'   => $prefix . 'plat-title'
+    ) );
+      
+    $plat = $cmb_box->add_field( array(
+		'id'          => $prefix . 'plat',
+		'type'        => 'group',
+		'options'     => array(
+			'group_title'   => __( 'Course {#}', 'cmb2' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another Course', 'cmb2' ),
+			'remove_button' => __( 'Remove Course', 'cmb2' ),
+			'sortable'      => true // beta
+			// 'closed'     => true, // true to have the groups closed by default
+		)
+	) );
+    
+    $cmb_box->add_group_field( $plat, array(
+        'name'             => __( 'Name', 'cmb2' ),
+        'id'               => 'name',
+        'type'             => 'text'
+    ) );
+    
+    $cmb_box->add_group_field( $plat, array(
+        'name'             => __( 'Description', 'cmb2' ),
+        'id'               => 'desc',
+        'type'             => 'text'
+    ) );
+    
+    $cmb_box->add_group_field( $plat, array(
+		'name'             => __( 'Extra', 'cmb2' ),
+		'id'               => 'extra',
+		'type'             => 'checkbox'
+	) );
+    
+    $cmb_box->add_field( array(
+        'name' => 'Dessert',
+        'type' => 'title',
+        'id'   => $prefix . 'dessert-title'
+    ) );
+      
+    $dessert = $cmb_box->add_field( array(
+		'id'          => $prefix . 'dessert',
+		'type'        => 'group',
+		'options'     => array(
+			'group_title'   => __( 'Course {#}', 'cmb2' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another Course', 'cmb2' ),
+			'remove_button' => __( 'Remove Course', 'cmb2' ),
+			'sortable'      => true // beta
+			// 'closed'     => true, // true to have the groups closed by default
+		)
+	) );
+    
+    $cmb_box->add_group_field( $dessert, array(
+        'name'             => __( 'Name', 'cmb2' ),
+        'id'               => 'name',
+        'type'             => 'text'
+    ) );
+    
+    $cmb_box->add_group_field( $dessert, array(
+        'name'             => __( 'Description', 'cmb2' ),
+        'id'               => 'desc',
+        'type'             => 'text'
+    ) );
+    
+    $cmb_box->add_group_field( $dessert, array(
+		'name'             => __( 'Extra', 'cmb2' ),
+		'id'               => 'extra',
+		'type'             => 'checkbox'
+	) );
+    
 }
 
 add_action( 'cmb2_init', 'startup_reloaded_menus_meta' );
