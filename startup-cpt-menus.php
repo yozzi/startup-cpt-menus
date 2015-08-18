@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: StartUp Menus Custom Post
+Plugin Name: StartUp Menus Custom Post Type
 Description: Le plugin pour activer le Custom Post Menus
 Author: Yann Caplain
 Version: 0.2.0
