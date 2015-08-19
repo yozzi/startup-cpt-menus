@@ -3,13 +3,13 @@
 Plugin Name: StartUp Menus Custom Post Type
 Description: Le plugin pour activer le Custom Post Menus
 Author: Yann Caplain
-Version: 0.3.0
+Version: 0.2.0
 */
 
 //GitHub Plugin Updater
 
 function startup_reloaded_github_plugin_updater() {
-	require_once 'lib/updater.php';
+	include_once 'lib/updater.php';
 	define( 'WP_GITHUB_FORCE_UPDATE', true );
 	if ( is_admin() ) {
 		$config = array(
