@@ -1,5 +1,3 @@
-~Current Version:0.2.0~
-
 StartUp CPT Projects
 ===
 
