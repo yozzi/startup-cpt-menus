@@ -9,7 +9,7 @@ Version: 0.3.0
 //GitHub Plugin Updater
 
 function startup_reloaded_github_plugin_updater() {
-	include_once 'lib/updater.php';
+	require_once 'lib/updater.php';
 	define( 'WP_GITHUB_FORCE_UPDATE', true );
 	if ( is_admin() ) {
 		$config = array(
