@@ -75,7 +75,7 @@ function startup_reloaded_menus() {
 
 add_action( 'init', 'startup_reloaded_menus', 0 );
 
-//Flusher les permalink à l'activation du plgin pour qu'ils fonctionnent sans mise à jour manuelle
+//Flusher les permalink à l'activation du plugin pour qu'ils fonctionnent sans mise à jour manuelle
 function startup_reloaded_menus_rewrite_flush() {
     startup_reloaded_menus();
     flush_rewrite_rules();
@@ -392,5 +392,5 @@ function startup_reloaded_menus_meta() {
     
 }
 
-add_action( 'cmb2_init', 'startup_reloaded_menus_meta' );
+add_action( 'cmb2_admin_init', 'startup_reloaded_menus_meta' );
 ?>
