@@ -1,9 +1,10 @@
 <?php
 /*
-Plugin Name: StartUp Menus
+Plugin Name: StartUp CPT Menus
 Description: Le plugin pour activer le Custom Post Menus
 Author: Yann Caplain
 Version: 0.2.0
+Text Domain: startup-cpt-menus
 */
 
 //GitHub Plugin Updater
