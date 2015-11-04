@@ -34,25 +34,25 @@ add_action( 'init', 'startup_reloaded_menus_updater' );
 //CPT
 function startup_reloaded_menus() {
 	$labels = array(
-		'name'                => _x( 'Menus', 'Post Type General Name', 'text_domain' ),
-		'singular_name'       => _x( 'Menu', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'           => __( 'Menus (b)', 'text_domain' ),
-		'name_admin_bar'      => __( 'Menus', 'text_domain' ),
-		'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
-		'all_items'           => __( 'All Items', 'text_domain' ),
-		'add_new_item'        => __( 'Add New Item', 'text_domain' ),
-		'add_new'             => __( 'Add New', 'text_domain' ),
-		'new_item'            => __( 'New Item', 'text_domain' ),
-		'edit_item'           => __( 'Edit Item', 'text_domain' ),
-		'update_item'         => __( 'Update Item', 'text_domain' ),
-		'view_item'           => __( 'View Item', 'text_domain' ),
-		'search_items'        => __( 'Search Item', 'text_domain' ),
-		'not_found'           => __( 'Not found', 'text_domain' ),
-		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' )
+		'name'                => _x( 'Menus', 'Post Type General Name', 'startup-cpt-menus' ),
+		'singular_name'       => _x( 'Menu', 'Post Type Singular Name', 'startup-cpt-menus' ),
+		'menu_name'           => __( 'Menus (b)', 'startup-cpt-menus' ),
+		'name_admin_bar'      => __( 'Menus', 'startup-cpt-menus' ),
+		'parent_item_colon'   => __( 'Parent Item:', 'startup-cpt-menus' ),
+		'all_items'           => __( 'All Items', 'startup-cpt-menus' ),
+		'add_new_item'        => __( 'Add New Item', 'startup-cpt-menus' ),
+		'add_new'             => __( 'Add New', 'startup-cpt-menus' ),
+		'new_item'            => __( 'New Item', 'startup-cpt-menus' ),
+		'edit_item'           => __( 'Edit Item', 'startup-cpt-menus' ),
+		'update_item'         => __( 'Update Item', 'startup-cpt-menus' ),
+		'view_item'           => __( 'View Item', 'startup-cpt-menus' ),
+		'search_items'        => __( 'Search Item', 'startup-cpt-menus' ),
+		'not_found'           => __( 'Not found', 'startup-cpt-menus' ),
+		'not_found_in_trash'  => __( 'Not found in Trash', 'startup-cpt-menus' )
 	);
 	$args = array(
-		'label'               => __( 'menus', 'text_domain' ),
-		'description'         => __( 'Post Type Description', 'text_domain' ),
+		'label'               => __( 'menus', 'startup-cpt-menus' ),
+		'description'         => __( 'Post Type Description', 'startup-cpt-menus' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'revisions', ),
 		'hierarchical'        => true,
@@ -107,23 +107,23 @@ register_activation_hook( __FILE__, 'startup_reloaded_menus_caps' );
 // Menu types taxonomy
 function startup_reloaded_menu_types() {
 	$labels = array(
-		'name'                       => _x( 'Menu Types', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Menu Type', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Menu Types', 'text_domain' ),
-		'all_items'                  => __( 'All Items', 'text_domain' ),
-		'parent_item'                => __( 'Parent Item', 'text_domain' ),
-		'parent_item_colon'          => __( 'Parent Item:', 'text_domain' ),
-		'new_item_name'              => __( 'New Item Name', 'text_domain' ),
-		'add_new_item'               => __( 'Add New Item', 'text_domain' ),
-		'edit_item'                  => __( 'Edit Item', 'text_domain' ),
-		'update_item'                => __( 'Update Item', 'text_domain' ),
-		'view_item'                  => __( 'View Item', 'text_domain' ),
-		'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
-		'add_or_remove_items'        => __( 'Add or remove items', 'text_domain' ),
-		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
-		'popular_items'              => __( 'Popular Items', 'text_domain' ),
-		'search_items'               => __( 'Search Items', 'text_domain' ),
-		'not_found'                  => __( 'Not Found', 'text_domain' )
+		'name'                       => _x( 'Menu Types', 'Taxonomy General Name', 'startup-cpt-menus' ),
+		'singular_name'              => _x( 'Menu Type', 'Taxonomy Singular Name', 'startup-cpt-menus' ),
+		'menu_name'                  => __( 'Menu Types', 'startup-cpt-menus' ),
+		'all_items'                  => __( 'All Items', 'startup-cpt-menus' ),
+		'parent_item'                => __( 'Parent Item', 'startup-cpt-menus' ),
+		'parent_item_colon'          => __( 'Parent Item:', 'startup-cpt-menus' ),
+		'new_item_name'              => __( 'New Item Name', 'startup-cpt-menus' ),
+		'add_new_item'               => __( 'Add New Item', 'startup-cpt-menus' ),
+		'edit_item'                  => __( 'Edit Item', 'startup-cpt-menus' ),
+		'update_item'                => __( 'Update Item', 'startup-cpt-menus' ),
+		'view_item'                  => __( 'View Item', 'startup-cpt-menus' ),
+		'separate_items_with_commas' => __( 'Separate items with commas', 'startup-cpt-menus' ),
+		'add_or_remove_items'        => __( 'Add or remove items', 'startup-cpt-menus' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'startup-cpt-menus' ),
+		'popular_items'              => __( 'Popular Items', 'startup-cpt-menus' ),
+		'search_items'               => __( 'Search Items', 'startup-cpt-menus' ),
+		'not_found'                  => __( 'Not Found', 'startup-cpt-menus' )
 	);
 	$args = array(
 		'labels'                     => $labels,
@@ -156,13 +156,13 @@ function startup_reloaded_menus_meta() {
 
 	$cmb_box = new_cmb2_box( array(
 		'id'            => $prefix . 'metabox',
-		'title'         => __( 'Menu details', 'cmb2' ),
+		'title'         => __( 'Menu details', 'startup-cpt-menus' ),
 		'object_types'  => array( 'menus' )
 	) );
     
     $cmb_box->add_field( array(
-		'name' => __( 'Main picture', 'cmb2' ),
-		'desc' => __( 'Main image of the menu, may be different from the thumbnail. i.e. 5-course diner', 'cmb2' ),
+		'name' => __( 'Main picture', 'startup-cpt-menus' ),
+		'desc' => __( 'Main image of the menu, may be different from the thumbnail. i.e. 5-course diner', 'startup-cpt-menus' ),
 		'id'   => $prefix . 'main_pic',
 		'type' => 'file',
         // Optionally hide the text input for the url:
@@ -172,8 +172,8 @@ function startup_reloaded_menus_meta() {
 	) );
     
     $cmb_box->add_field( array(
-		'name' => __( 'Thumbnail', 'cmb2' ),
-		'desc' => __( 'The menu picture on your website listings, if different from Main picture.', 'cmb2' ),
+		'name' => __( 'Thumbnail', 'startup-cpt-menus' ),
+		'desc' => __( 'The menu picture on your website listings, if different from Main picture.', 'startup-cpt-menus' ),
 		'id'   => $prefix . 'thumbnail',
 		'type' => 'file',
         // Optionally hide the text input for the url:
@@ -183,15 +183,15 @@ function startup_reloaded_menus_meta() {
 	) );
 
 	$cmb_box->add_field( array(
-		'name'       => __( 'Short description', 'cmb2' ),
-		'desc'       => __( 'i.e. "French gourmet menu."', 'cmb2' ),
+		'name'       => __( 'Short description', 'startup-cpt-menus' ),
+		'desc'       => __( 'i.e. "French gourmet menu."', 'startup-cpt-menus' ),
 		'id'         => $prefix . 'short',
 		'type'       => 'text'
 	) );
     
     $cmb_box->add_field( array(
-		'name'     => __( 'Type', 'cmb2' ),
-		'desc'     => __( 'Select the type(s) of the menu', 'cmb2' ),
+		'name'     => __( 'Type', 'startup-cpt-menus' ),
+		'desc'     => __( 'Select the type(s) of the menu', 'startup-cpt-menus' ),
 		'id'       => $prefix . 'type',
 		'type'     => 'taxonomy_multicheck',
 		'taxonomy' => 'menu-type', // Taxonomy Slug
@@ -199,7 +199,7 @@ function startup_reloaded_menus_meta() {
 	) );
     
     $cmb_box->add_field( array(
-		'name'       => __( 'Inclusions', 'cmb2' ),
+		'name'       => __( 'Inclusions', 'startup-cpt-menus' ),
 		'id'         => $prefix . 'inclusions',
 		'type'       => 'multicheck',
         'options' => array(
@@ -221,28 +221,28 @@ function startup_reloaded_menus_meta() {
 		'id'          => $prefix . 'miseenbouche',
 		'type'        => 'group',
 		'options'     => array(
-			'group_title'   => __( 'Course {#}', 'cmb2' ), // {#} gets replaced by row number
-			'add_button'    => __( 'Add Another Course', 'cmb2' ),
-			'remove_button' => __( 'Remove Course', 'cmb2' ),
+			'group_title'   => __( 'Course {#}', 'startup-cpt-menus' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another Course', 'startup-cpt-menus' ),
+			'remove_button' => __( 'Remove Course', 'startup-cpt-menus' ),
 			'sortable'      => true // beta
 			// 'closed'     => true, // true to have the groups closed by default
 		)
 	) );
     
     $cmb_box->add_group_field( $miseenbouche, array(
-        'name'             => __( 'Name', 'cmb2' ),
+        'name'             => __( 'Name', 'startup-cpt-menus' ),
         'id'               => 'name',
         'type'             => 'text'
     ) );
     
     $cmb_box->add_group_field( $miseenbouche, array(
-        'name'             => __( 'Description', 'cmb2' ),
+        'name'             => __( 'Description', 'startup-cpt-menus' ),
         'id'               => 'desc',
         'type'             => 'text'
     ) );
     
     $cmb_box->add_group_field( $miseenbouche, array(
-		'name'             => __( 'Extra', 'cmb2' ),
+		'name'             => __( 'Extra', 'startup-cpt-menus' ),
 		'id'               => 'extra',
 		'type'             => 'checkbox'
 	) );
@@ -257,28 +257,28 @@ function startup_reloaded_menus_meta() {
 		'id'          => $prefix . 'entree',
 		'type'        => 'group',
 		'options'     => array(
-			'group_title'   => __( 'Course {#}', 'cmb2' ), // {#} gets replaced by row number
-			'add_button'    => __( 'Add Another Course', 'cmb2' ),
-			'remove_button' => __( 'Remove Course', 'cmb2' ),
+			'group_title'   => __( 'Course {#}', 'startup-cpt-menus' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another Course', 'startup-cpt-menus' ),
+			'remove_button' => __( 'Remove Course', 'startup-cpt-menus' ),
 			'sortable'      => true // beta
 			// 'closed'     => true, // true to have the groups closed by default
 		)
 	) );
     
     $cmb_box->add_group_field( $entree, array(
-        'name'             => __( 'Name', 'cmb2' ),
+        'name'             => __( 'Name', 'startup-cpt-menus' ),
         'id'               => 'name',
         'type'             => 'text'
     ) );
     
     $cmb_box->add_group_field( $entree, array(
-        'name'             => __( 'Description', 'cmb2' ),
+        'name'             => __( 'Description', 'startup-cpt-menus' ),
         'id'               => 'desc',
         'type'             => 'text'
     ) );
     
     $cmb_box->add_group_field( $entree, array(
-		'name'             => __( 'Extra', 'cmb2' ),
+		'name'             => __( 'Extra', 'startup-cpt-menus' ),
 		'id'               => 'extra',
 		'type'             => 'checkbox'
 	) );
@@ -293,28 +293,28 @@ function startup_reloaded_menus_meta() {
 		'id'          => $prefix . 'prelude',
 		'type'        => 'group',
 		'options'     => array(
-			'group_title'   => __( 'Course {#}', 'cmb2' ), // {#} gets replaced by row number
-			'add_button'    => __( 'Add Another Course', 'cmb2' ),
-			'remove_button' => __( 'Remove Course', 'cmb2' ),
+			'group_title'   => __( 'Course {#}', 'startup-cpt-menus' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another Course', 'startup-cpt-menus' ),
+			'remove_button' => __( 'Remove Course', 'startup-cpt-menus' ),
 			'sortable'      => true // beta
 			// 'closed'     => true, // true to have the groups closed by default
 		)
 	) );
     
     $cmb_box->add_group_field( $prelude, array(
-        'name'             => __( 'Name', 'cmb2' ),
+        'name'             => __( 'Name', 'startup-cpt-menus' ),
         'id'               => 'name',
         'type'             => 'text'
     ) );
     
     $cmb_box->add_group_field( $prelude, array(
-        'name'             => __( 'Description', 'cmb2' ),
+        'name'             => __( 'Description', 'startup-cpt-menus' ),
         'id'               => 'desc',
         'type'             => 'text'
     ) );
     
     $cmb_box->add_group_field( $prelude, array(
-		'name'             => __( 'Extra', 'cmb2' ),
+		'name'             => __( 'Extra', 'startup-cpt-menus' ),
 		'id'               => 'extra',
 		'type'             => 'checkbox'
 	) );
@@ -329,28 +329,28 @@ function startup_reloaded_menus_meta() {
 		'id'          => $prefix . 'plat',
 		'type'        => 'group',
 		'options'     => array(
-			'group_title'   => __( 'Course {#}', 'cmb2' ), // {#} gets replaced by row number
-			'add_button'    => __( 'Add Another Course', 'cmb2' ),
-			'remove_button' => __( 'Remove Course', 'cmb2' ),
+			'group_title'   => __( 'Course {#}', 'startup-cpt-menus' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another Course', 'startup-cpt-menus' ),
+			'remove_button' => __( 'Remove Course', 'startup-cpt-menus' ),
 			'sortable'      => true // beta
 			// 'closed'     => true, // true to have the groups closed by default
 		)
 	) );
     
     $cmb_box->add_group_field( $plat, array(
-        'name'             => __( 'Name', 'cmb2' ),
+        'name'             => __( 'Name', 'startup-cpt-menus' ),
         'id'               => 'name',
         'type'             => 'text'
     ) );
     
     $cmb_box->add_group_field( $plat, array(
-        'name'             => __( 'Description', 'cmb2' ),
+        'name'             => __( 'Description', 'startup-cpt-menus' ),
         'id'               => 'desc',
         'type'             => 'text'
     ) );
     
     $cmb_box->add_group_field( $plat, array(
-		'name'             => __( 'Extra', 'cmb2' ),
+		'name'             => __( 'Extra', 'startup-cpt-menus' ),
 		'id'               => 'extra',
 		'type'             => 'checkbox'
 	) );
@@ -365,28 +365,28 @@ function startup_reloaded_menus_meta() {
 		'id'          => $prefix . 'dessert',
 		'type'        => 'group',
 		'options'     => array(
-			'group_title'   => __( 'Course {#}', 'cmb2' ), // {#} gets replaced by row number
-			'add_button'    => __( 'Add Another Course', 'cmb2' ),
-			'remove_button' => __( 'Remove Course', 'cmb2' ),
+			'group_title'   => __( 'Course {#}', 'startup-cpt-menus' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another Course', 'startup-cpt-menus' ),
+			'remove_button' => __( 'Remove Course', 'startup-cpt-menus' ),
 			'sortable'      => true // beta
 			// 'closed'     => true, // true to have the groups closed by default
 		)
 	) );
     
     $cmb_box->add_group_field( $dessert, array(
-        'name'             => __( 'Name', 'cmb2' ),
+        'name'             => __( 'Name', 'startup-cpt-menus' ),
         'id'               => 'name',
         'type'             => 'text'
     ) );
     
     $cmb_box->add_group_field( $dessert, array(
-        'name'             => __( 'Description', 'cmb2' ),
+        'name'             => __( 'Description', 'startup-cpt-menus' ),
         'id'               => 'desc',
         'type'             => 'text'
     ) );
     
     $cmb_box->add_group_field( $dessert, array(
-		'name'             => __( 'Extra', 'cmb2' ),
+		'name'             => __( 'Extra', 'startup-cpt-menus' ),
 		'id'               => 'extra',
 		'type'             => 'checkbox'
 	) );
