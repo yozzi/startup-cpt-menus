@@ -7,6 +7,11 @@ Version: 0.2.0
 Text Domain: startup-cpt-menus
 */
 
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+	die;
+}
+
 //GitHub Plugin Updater
 function startup_reloaded_menus_updater() {
 	include_once 'lib/updater.php';
