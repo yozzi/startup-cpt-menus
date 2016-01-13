@@ -155,6 +155,25 @@ function startup_reloaded_menu_types_metabox_remove() {
 add_action( 'admin_menu' , 'startup_reloaded_menu_types_metabox_remove' );
 
 // Metaboxes
+/**
+ * Detection de CMB2. Identique dans tous les plugins.
+ */
+if ( !function_exists( 'cmb2_detection' ) ) {
+    function cmb2_detection() {
+        if ( !is_plugin_active('CMB2/init.php')  && !function_exists( 'startup_reloaded_setup' ) ) {
+            add_action( 'admin_notices', 'cmb2_notice' );
+        }
+    }
+
+    function cmb2_notice() {
+        if ( current_user_can( 'activate_plugins' ) ) {
+            echo '<div class="error message"><p>' . __( 'CMB2 plugin or StartUp Reloaded theme must be active to use custom metaboxes.', 'startup-cpt-menus' ) . '</p></div>';
+        }
+    }
+
+    add_action( 'init', 'cmb2_detection' );
+}
+
 function startup_cpt_menus_meta() {
 	// Start with an underscore to hide fields from custom fields list
 	$prefix = '_startup_cpt_menus_';
@@ -428,18 +447,18 @@ add_shortcode( 'menus', 'startup_cpt_menus_shortcode' );
  */
 if ( !function_exists( 'shortcode_ui_detection' ) ) {
     function shortcode_ui_detection() {
-        if ( !function_exists( 'shortcode_ui_register_for_shortcode' ) ) {
+        if ( !is_plugin_active('startup-cpt-products/startup-cpt-products.php') ) {
             add_action( 'admin_notices', 'shortcode_ui_notice' );
         }
     }
 
     function shortcode_ui_notice() {
         if ( current_user_can( 'activate_plugins' ) ) {
-            echo '<div class="error message"><p>' . __( 'Shortcake plugin must be active to use fast shortcodes.', 'startup-cpt-timeline' ) . '</p></div>';
+            echo '<div class="error message"><p>' . __( 'Shortcake plugin must be active to use fast shortcodes.', 'startup-cpt-menus' ) . '</p></div>';
         }
     }
 
-add_action( 'init', 'shortcode_ui_detection' );
+    add_action( 'init', 'shortcode_ui_detection' );
 }
 
 function startup_cpt_menus_shortcode_ui() {
