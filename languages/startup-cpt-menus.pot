@@ -1,0 +1,255 @@
+# Loco Gettext template
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: StartUp CPT Menus\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Thu Jan 14 2016 08:57:24 GMT-0500 (Est)\n"
+"POT-Revision-Date: Thu Jan 14 2016 08:57:45 GMT-0500 (Est)\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#. Name of the plugin
+msgid "StartUp CPT Menus"
+msgstr ""
+
+#. Description of the plugin
+msgid "Le plugin pour activer le Custom Post Menus"
+msgstr ""
+
+#. Author of the plugin
+msgid "Yann Caplain"
+msgstr ""
+
+#: ../startup-cpt-menus.php:43
+msgctxt "Post Type General Name"
+msgid "Menus"
+msgstr ""
+
+#: ../startup-cpt-menus.php:44
+msgctxt "Post Type Singular Name"
+msgid "Menu"
+msgstr ""
+
+#: ../startup-cpt-menus.php:45
+msgid "Menus (b)"
+msgstr ""
+
+#: ../startup-cpt-menus.php:46 ../startup-cpt-menus.php:470
+msgid "Menus"
+msgstr ""
+
+#: ../startup-cpt-menus.php:47 ../startup-cpt-menus.php:121
+msgid "Parent Item:"
+msgstr ""
+
+#: ../startup-cpt-menus.php:48 ../startup-cpt-menus.php:119
+msgid "All Items"
+msgstr ""
+
+#: ../startup-cpt-menus.php:49 ../startup-cpt-menus.php:123
+msgid "Add New Item"
+msgstr ""
+
+#: ../startup-cpt-menus.php:50
+msgid "Add New"
+msgstr ""
+
+#: ../startup-cpt-menus.php:51
+msgid "New Item"
+msgstr ""
+
+#: ../startup-cpt-menus.php:52 ../startup-cpt-menus.php:124
+msgid "Edit Item"
+msgstr ""
+
+#: ../startup-cpt-menus.php:53 ../startup-cpt-menus.php:125
+msgid "Update Item"
+msgstr ""
+
+#: ../startup-cpt-menus.php:54 ../startup-cpt-menus.php:126
+msgid "View Item"
+msgstr ""
+
+#: ../startup-cpt-menus.php:55
+msgid "Search Item"
+msgstr ""
+
+#: ../startup-cpt-menus.php:56
+msgid "Not found"
+msgstr ""
+
+#: ../startup-cpt-menus.php:57
+msgid "Not found in Trash"
+msgstr ""
+
+#: ../startup-cpt-menus.php:60
+msgid "menus"
+msgstr ""
+
+#: ../startup-cpt-menus.php:61
+msgid "Post Type Description"
+msgstr ""
+
+#: ../startup-cpt-menus.php:116
+msgctxt "Taxonomy General Name"
+msgid "Menu Types"
+msgstr ""
+
+#: ../startup-cpt-menus.php:117
+msgctxt "Taxonomy Singular Name"
+msgid "Menu Type"
+msgstr ""
+
+#: ../startup-cpt-menus.php:118
+msgid "Menu Types"
+msgstr ""
+
+#: ../startup-cpt-menus.php:120
+msgid "Parent Item"
+msgstr ""
+
+#: ../startup-cpt-menus.php:122
+msgid "New Item Name"
+msgstr ""
+
+#: ../startup-cpt-menus.php:127
+msgid "Separate items with commas"
+msgstr ""
+
+#: ../startup-cpt-menus.php:128
+msgid "Add or remove items"
+msgstr ""
+
+#: ../startup-cpt-menus.php:129
+msgid "Choose from the most used"
+msgstr ""
+
+#: ../startup-cpt-menus.php:130
+msgid "Popular Items"
+msgstr ""
+
+#: ../startup-cpt-menus.php:131
+msgid "Search Items"
+msgstr ""
+
+#: ../startup-cpt-menus.php:132
+msgid "Not Found"
+msgstr ""
+
+#: ../startup-cpt-menus.php:171
+msgid "CMB2 plugin or StartUp Reloaded theme must be active to use custom metaboxes."
+msgstr ""
+
+#: ../startup-cpt-menus.php:184
+msgid "Menu details"
+msgstr ""
+
+#: ../startup-cpt-menus.php:189
+msgid "Main picture"
+msgstr ""
+
+#: ../startup-cpt-menus.php:190
+msgid ""
+"Main image of the menu, may be different from the thumbnail. i.e. 5-course "
+"diner"
+msgstr ""
+
+#: ../startup-cpt-menus.php:200
+msgid "Thumbnail"
+msgstr ""
+
+#: ../startup-cpt-menus.php:201
+msgid "The menu picture on your website listings, if different from Main picture."
+msgstr ""
+
+#: ../startup-cpt-menus.php:211
+msgid "Short description"
+msgstr ""
+
+#: ../startup-cpt-menus.php:212
+msgid "i.e. \"French gourmet menu.\""
+msgstr ""
+
+#: ../startup-cpt-menus.php:218
+msgid "Type"
+msgstr ""
+
+#: ../startup-cpt-menus.php:219
+msgid "Select the type(s) of the menu"
+msgstr ""
+
+#: ../startup-cpt-menus.php:227
+msgid "Inclusions"
+msgstr ""
+
+#: ../startup-cpt-menus.php:249 ../startup-cpt-menus.php:285 ../startup-cpt-menus.
+#: php:321 ../startup-cpt-menus.php:357 ../startup-cpt-menus.php:393
+msgid "Course {#}"
+msgstr ""
+
+#: ../startup-cpt-menus.php:250 ../startup-cpt-menus.php:286 ../startup-cpt-menus.
+#: php:322 ../startup-cpt-menus.php:358 ../startup-cpt-menus.php:394
+msgid "Add Another Course"
+msgstr ""
+
+#: ../startup-cpt-menus.php:251 ../startup-cpt-menus.php:287 ../startup-cpt-menus.
+#: php:323 ../startup-cpt-menus.php:359 ../startup-cpt-menus.php:395
+msgid "Remove Course"
+msgstr ""
+
+#: ../startup-cpt-menus.php:258 ../startup-cpt-menus.php:294 ../startup-cpt-menus.
+#: php:330 ../startup-cpt-menus.php:366 ../startup-cpt-menus.php:402
+msgid "Name"
+msgstr ""
+
+#: ../startup-cpt-menus.php:264 ../startup-cpt-menus.php:300 ../startup-cpt-menus.
+#: php:336 ../startup-cpt-menus.php:372 ../startup-cpt-menus.php:408
+msgid "Description"
+msgstr ""
+
+#: ../startup-cpt-menus.php:270 ../startup-cpt-menus.php:306 ../startup-cpt-menus.
+#: php:342 ../startup-cpt-menus.php:378 ../startup-cpt-menus.php:414
+msgid "Extra"
+msgstr ""
+
+#: ../startup-cpt-menus.php:420
+msgid "Notes"
+msgstr ""
+
+#: ../startup-cpt-menus.php:458
+msgid "Shortcake plugin must be active to use fast shortcodes."
+msgstr ""
+
+#: ../startup-cpt-menus.php:474
+msgid "Background"
+msgstr ""
+
+#: ../startup-cpt-menus.php:479
+msgid "ID"
+msgstr ""
+
+#: ../lib/updater.php:434
+msgid ""
+"The plugin has been updated, but could not be reactivated. Please reactivate "
+"it manually."
+msgstr ""
+
+#: ../lib/updater.php:435
+msgid "Plugin reactivated successfully."
+msgstr ""
