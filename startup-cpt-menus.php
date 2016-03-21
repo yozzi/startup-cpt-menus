@@ -447,7 +447,7 @@ add_shortcode( 'menus', 'startup_cpt_menus_shortcode' );
 
 // Shortcode UI
 /**
- * Detecion de Shortcake. Identique dans tous les plugins.
+ * Detection de Shortcake. Identique dans tous les plugins.
  */
 if ( !function_exists( 'shortcode_ui_detection' ) ) {
     function shortcode_ui_detection() {
