@@ -48,7 +48,7 @@ function startup_cpt_menus() {
 	$labels = array(
 		'name'                => _x( 'Menus', 'Post Type General Name', 'startup-cpt-menus' ),
 		'singular_name'       => _x( 'Menu', 'Post Type Singular Name', 'startup-cpt-menus' ),
-		'menu_name'           => __( 'Menus (b)', 'startup-cpt-menus' ),
+		'menu_name'           => __( 'Menus', 'startup-cpt-menus' ),
 		'name_admin_bar'      => __( 'Menus', 'startup-cpt-menus' ),
 		'parent_item_colon'   => __( 'Parent Item:', 'startup-cpt-menus' ),
 		'all_items'           => __( 'All Items', 'startup-cpt-menus' ),
@@ -152,9 +152,46 @@ function startup_reloaded_menu_types() {
 
 add_action( 'init', 'startup_reloaded_menu_types', 0 );
 
+// Menu company taxonomy
+function startup_reloaded_menu_company() {
+	$labels = array(
+		'name'                       => _x( 'Menu Company', 'Taxonomy General Name', 'startup-cpt-menus' ),
+		'singular_name'              => _x( 'Menu Company', 'Taxonomy Singular Name', 'startup-cpt-menus' ),
+		'menu_name'                  => __( 'Menu Companies', 'startup-cpt-menus' ),
+		'all_items'                  => __( 'All Items', 'startup-cpt-menus' ),
+		'parent_item'                => __( 'Parent Item', 'startup-cpt-menus' ),
+		'parent_item_colon'          => __( 'Parent Item:', 'startup-cpt-menus' ),
+		'new_item_name'              => __( 'New Item Name', 'startup-cpt-menus' ),
+		'add_new_item'               => __( 'Add New Item', 'startup-cpt-menus' ),
+		'edit_item'                  => __( 'Edit Item', 'startup-cpt-menus' ),
+		'update_item'                => __( 'Update Item', 'startup-cpt-menus' ),
+		'view_item'                  => __( 'View Item', 'startup-cpt-menus' ),
+		'separate_items_with_commas' => __( 'Separate items with commas', 'startup-cpt-menus' ),
+		'add_or_remove_items'        => __( 'Add or remove items', 'startup-cpt-menus' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'startup-cpt-menus' ),
+		'popular_items'              => __( 'Popular Items', 'startup-cpt-menus' ),
+		'search_items'               => __( 'Search Items', 'startup-cpt-menus' ),
+		'not_found'                  => __( 'Not Found', 'startup-cpt-menus' )
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => false,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => false
+	);
+	register_taxonomy( 'menu-company', array( 'menus' ), $args );
+
+}
+
+add_action( 'init', 'startup_reloaded_menu_company', 0 );
+
 // Retirer la boite de la taxonomie sur le coté
 function startup_reloaded_menu_types_metabox_remove() {
 	remove_meta_box( 'tagsdiv-menu-type', 'menus', 'side' );
+    remove_meta_box( 'tagsdiv-menu-company', 'menus', 'side' );
     // tagsdiv-project_types pour les taxonomies type tags
     // custom_taxonomy_slugdiv pour les taxonomies type categories
 }
@@ -207,6 +244,14 @@ function startup_cpt_menus_meta() {
 		'id'       => $prefix . 'type',
 		'type'     => 'taxonomy_multicheck',
 		'taxonomy' => 'menu-type', // Taxonomy Slug
+		'inline'  => true // Toggles display to inline
+	) );
+    
+    $cmb_box->add_field( array(
+		'name'     => __( 'Company', 'startup-cpt-menus' ),
+		'id'       => $prefix . 'company',
+		'type'     => 'taxonomy_multicheck',
+		'taxonomy' => 'menu-company', // Taxonomy Slug
 		'inline'  => true // Toggles display to inline
 	) );
     
@@ -404,9 +449,35 @@ function startup_cpt_menus_meta() {
 	) );
     
     $cmb_box->add_field( array(
+		'name'       => __( 'Autres types de menus', 'startup-cpt-menus' ),
+		'desc'       => __( 'Lunch boxes, bar, caterer...', 'startup-cpt-menus' ),
+		'id'         => $prefix . 'others',
+		'type'    => 'wysiwyg',
+        'options' => array(
+            'wpautop' => true, // use wpautop?
+            'media_buttons' => false, // show insert/upload button(s)
+//            'textarea_name' => $editor_id, // set the textarea name to something different, square brackets [] can be used here
+            'textarea_rows' => get_option('default_post_edit_rows', 10), // rows="..."
+            'tabindex' => '',
+            'editor_css' => '', // intended for extra styles for both visual and HTML editors buttons, needs to include the `<style>` tags, can use "scoped".
+            'editor_class' => '', // add extra class(es) to the editor textarea
+            'teeny' => false, // output the minimal editor config used in Press This
+            'dfw' => false, // replace the default fullscreen with DFW (needs specific css)
+            'tinymce' => true, // load TinyMCE, can be used to pass settings directly to TinyMCE using an array()
+            'quicktags' => true // load Quicktags, can be used to pass settings directly to Quicktags using an array()
+        ),
+	) );
+    
+    $cmb_box->add_field( array(
 		'name'       => __( 'Notes', 'startup-cpt-menus' ),
 		'id'         => $prefix . 'notes',
 		'type'       => 'textarea'
+	) );
+    
+    $cmb_box->add_field( array(
+		'name'       => __( 'Price', 'startup-cpt-menus' ),
+		'id'         => $prefix . 'price',
+		'type'       => 'text'
 	) );
     
 }
@@ -419,17 +490,18 @@ function startup_cpt_menus_shortcode( $atts ) {
 	// Attributes
     $atts = shortcode_atts(array(
             'bg' => '',
-            'id' => ''
+            'id' => '',
+            'price' => ''
         ), $atts);
     
 	// Code
-    ob_start();
     if ( function_exists( 'startup_reloaded_setup' ) ) {
+        ob_start();
         require get_template_directory() . '/template-parts/content-menus.php';
-     } else {
+    } else {
         echo 'Should <a href="https://github.com/yozzi/startup-reloaded" target="_blank">install StartUp Reloaded Theme</a> to make things happen...';
-     }
-     return ob_get_clean();    
+    }
+    return ob_get_clean();
 }
 add_shortcode( 'menus', 'startup_cpt_menus_shortcode' );
 
@@ -446,6 +518,11 @@ function startup_cpt_menus_shortcode_ui() {
                     'label' => esc_html__( 'Background', 'startup-cpt-menus' ),
                     'attr'  => 'bg',
                     'type'  => 'color',
+                ),
+                array(
+                    'label' => esc_html__( 'Price', 'startup-cpt-menus' ),
+                    'attr'  => 'price',
+                    'type'  => 'checkbox',
                 ),
                 array(
                     'label'       => esc_html__( 'ID', 'startup-cpt-menus' ),
