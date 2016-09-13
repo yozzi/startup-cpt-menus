@@ -50,15 +50,15 @@ function startup_cpt_menus() {
 		'singular_name'       => _x( 'Menu', 'Post Type Singular Name', 'startup-cpt-menus' ),
 		'menu_name'           => __( 'Menus', 'startup-cpt-menus' ),
 		'name_admin_bar'      => __( 'Menus', 'startup-cpt-menus' ),
-		'parent_item_colon'   => __( 'Parent Item:', 'startup-cpt-menus' ),
-		'all_items'           => __( 'All Items', 'startup-cpt-menus' ),
-		'add_new_item'        => __( 'Add New Item', 'startup-cpt-menus' ),
+		'parent_item_colon'   => __( 'Parent Menu:', 'startup-cpt-menus' ),
+		'all_items'           => __( 'All Menus', 'startup-cpt-menus' ),
+		'add_new_item'        => __( 'Add New Menu', 'startup-cpt-menus' ),
 		'add_new'             => __( 'Add New', 'startup-cpt-menus' ),
-		'new_item'            => __( 'New Item', 'startup-cpt-menus' ),
-		'edit_item'           => __( 'Edit Item', 'startup-cpt-menus' ),
-		'update_item'         => __( 'Update Item', 'startup-cpt-menus' ),
-		'view_item'           => __( 'View Item', 'startup-cpt-menus' ),
-		'search_items'        => __( 'Search Item', 'startup-cpt-menus' ),
+		'new_item'            => __( 'New Menu', 'startup-cpt-menus' ),
+		'edit_item'           => __( 'Edit Menu', 'startup-cpt-menus' ),
+		'update_item'         => __( 'Update Menu', 'startup-cpt-menus' ),
+		'view_item'           => __( 'View Menu', 'startup-cpt-menus' ),
+		'search_items'        => __( 'Search Menu', 'startup-cpt-menus' ),
 		'not_found'           => __( 'Not found', 'startup-cpt-menus' ),
 		'not_found_in_trash'  => __( 'Not found in Trash', 'startup-cpt-menus' )
 	);
@@ -121,20 +121,20 @@ function startup_reloaded_menu_types() {
 	$labels = array(
 		'name'                       => _x( 'Menu Types', 'Taxonomy General Name', 'startup-cpt-menus' ),
 		'singular_name'              => _x( 'Menu Type', 'Taxonomy Singular Name', 'startup-cpt-menus' ),
-		'menu_name'                  => __( 'Menu Types', 'startup-cpt-menus' ),
-		'all_items'                  => __( 'All Items', 'startup-cpt-menus' ),
-		'parent_item'                => __( 'Parent Item', 'startup-cpt-menus' ),
-		'parent_item_colon'          => __( 'Parent Item:', 'startup-cpt-menus' ),
-		'new_item_name'              => __( 'New Item Name', 'startup-cpt-menus' ),
-		'add_new_item'               => __( 'Add New Item', 'startup-cpt-menus' ),
-		'edit_item'                  => __( 'Edit Item', 'startup-cpt-menus' ),
-		'update_item'                => __( 'Update Item', 'startup-cpt-menus' ),
-		'view_item'                  => __( 'View Item', 'startup-cpt-menus' ),
-		'separate_items_with_commas' => __( 'Separate items with commas', 'startup-cpt-menus' ),
-		'add_or_remove_items'        => __( 'Add or remove items', 'startup-cpt-menus' ),
+		'menu_name'                  => __( 'Types', 'startup-cpt-menus' ),
+		'all_items'                  => __( 'All Types', 'startup-cpt-menus' ),
+		'parent_item'                => __( 'Parent Type', 'startup-cpt-menus' ),
+		'parent_item_colon'          => __( 'Parent Type:', 'startup-cpt-menus' ),
+		'new_item_name'              => __( 'New Type Name', 'startup-cpt-menus' ),
+		'add_new_item'               => __( 'Add New Type', 'startup-cpt-menus' ),
+		'edit_item'                  => __( 'Edit Type', 'startup-cpt-menus' ),
+		'update_item'                => __( 'Update Type', 'startup-cpt-menus' ),
+		'view_item'                  => __( 'View Type', 'startup-cpt-menus' ),
+		'separate_items_with_commas' => __( 'Separate types with commas', 'startup-cpt-menus' ),
+		'add_or_remove_items'        => __( 'Add or remove types', 'startup-cpt-menus' ),
 		'choose_from_most_used'      => __( 'Choose from the most used', 'startup-cpt-menus' ),
-		'popular_items'              => __( 'Popular Items', 'startup-cpt-menus' ),
-		'search_items'               => __( 'Search Items', 'startup-cpt-menus' ),
+		'popular_items'              => __( 'Popular Types', 'startup-cpt-menus' ),
+		'search_items'               => __( 'Search Types', 'startup-cpt-menus' ),
 		'not_found'                  => __( 'Not Found', 'startup-cpt-menus' )
 	);
 	$args = array(
@@ -155,22 +155,22 @@ add_action( 'init', 'startup_reloaded_menu_types', 0 );
 // Menu company taxonomy
 function startup_reloaded_menu_company() {
 	$labels = array(
-		'name'                       => _x( 'Menu Company', 'Taxonomy General Name', 'startup-cpt-menus' ),
+		'name'                       => _x( 'Menu Companies', 'Taxonomy General Name', 'startup-cpt-menus' ),
 		'singular_name'              => _x( 'Menu Company', 'Taxonomy Singular Name', 'startup-cpt-menus' ),
-		'menu_name'                  => __( 'Menu Companies', 'startup-cpt-menus' ),
-		'all_items'                  => __( 'All Items', 'startup-cpt-menus' ),
-		'parent_item'                => __( 'Parent Item', 'startup-cpt-menus' ),
-		'parent_item_colon'          => __( 'Parent Item:', 'startup-cpt-menus' ),
-		'new_item_name'              => __( 'New Item Name', 'startup-cpt-menus' ),
-		'add_new_item'               => __( 'Add New Item', 'startup-cpt-menus' ),
-		'edit_item'                  => __( 'Edit Item', 'startup-cpt-menus' ),
-		'update_item'                => __( 'Update Item', 'startup-cpt-menus' ),
-		'view_item'                  => __( 'View Item', 'startup-cpt-menus' ),
-		'separate_items_with_commas' => __( 'Separate items with commas', 'startup-cpt-menus' ),
-		'add_or_remove_items'        => __( 'Add or remove items', 'startup-cpt-menus' ),
+		'menu_name'                  => __( 'Companies', 'startup-cpt-menus' ),
+		'all_items'                  => __( 'All Companies', 'startup-cpt-menus' ),
+		'parent_item'                => __( 'Parent Company', 'startup-cpt-menus' ),
+		'parent_item_colon'          => __( 'Parent Company:', 'startup-cpt-menus' ),
+		'new_item_name'              => __( 'New Company Name', 'startup-cpt-menus' ),
+		'add_new_item'               => __( 'Add New Company', 'startup-cpt-menus' ),
+		'edit_item'                  => __( 'Edit Company', 'startup-cpt-menus' ),
+		'update_item'                => __( 'Update Company', 'startup-cpt-menus' ),
+		'view_item'                  => __( 'View Company', 'startup-cpt-menus' ),
+		'separate_items_with_commas' => __( 'Separate companies with commas', 'startup-cpt-menus' ),
+		'add_or_remove_items'        => __( 'Add or remove companies', 'startup-cpt-menus' ),
 		'choose_from_most_used'      => __( 'Choose from the most used', 'startup-cpt-menus' ),
-		'popular_items'              => __( 'Popular Items', 'startup-cpt-menus' ),
-		'search_items'               => __( 'Search Items', 'startup-cpt-menus' ),
+		'popular_items'              => __( 'Popular Companies', 'startup-cpt-menus' ),
+		'search_items'               => __( 'Search Companies', 'startup-cpt-menus' ),
 		'not_found'                  => __( 'Not Found', 'startup-cpt-menus' )
 	);
 	$args = array(
@@ -188,10 +188,47 @@ function startup_reloaded_menu_company() {
 
 add_action( 'init', 'startup_reloaded_menu_company', 0 );
 
+// Menu season taxonomy
+function startup_reloaded_menu_season() {
+	$labels = array(
+		'name'                       => _x( 'Menu Seasons', 'Taxonomy General Name', 'startup-cpt-menus' ),
+		'singular_name'              => _x( 'Menu Season', 'Taxonomy Singular Name', 'startup-cpt-menus' ),
+		'menu_name'                  => __( 'Seasons', 'startup-cpt-menus' ),
+		'all_items'                  => __( 'All Seasons', 'startup-cpt-menus' ),
+		'parent_item'                => __( 'Parent Season', 'startup-cpt-menus' ),
+		'parent_item_colon'          => __( 'Parent Season:', 'startup-cpt-menus' ),
+		'new_item_name'              => __( 'New Season Name', 'startup-cpt-menus' ),
+		'add_new_item'               => __( 'Add New Season', 'startup-cpt-menus' ),
+		'edit_item'                  => __( 'Edit Season', 'startup-cpt-menus' ),
+		'update_item'                => __( 'Update Season', 'startup-cpt-menus' ),
+		'view_item'                  => __( 'View Season', 'startup-cpt-menus' ),
+		'separate_items_with_commas' => __( 'Separate seasons with commas', 'startup-cpt-menus' ),
+		'add_or_remove_items'        => __( 'Add or remove seasons', 'startup-cpt-menus' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'startup-cpt-menus' ),
+		'popular_items'              => __( 'Popular Seasons', 'startup-cpt-menus' ),
+		'search_items'               => __( 'Search Seasons', 'startup-cpt-menus' ),
+		'not_found'                  => __( 'Not Found', 'startup-cpt-menus' )
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => false,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => false
+	);
+	register_taxonomy( 'menu-season', array( 'menus' ), $args );
+
+}
+
+add_action( 'init', 'startup_reloaded_menu_season', 0 );
+
 // Retirer la boite de la taxonomie sur le coté
 function startup_reloaded_menu_types_metabox_remove() {
 	remove_meta_box( 'tagsdiv-menu-type', 'menus', 'side' );
     remove_meta_box( 'tagsdiv-menu-company', 'menus', 'side' );
+    remove_meta_box( 'tagsdiv-menu-season', 'menus', 'side' );
     // tagsdiv-project_types pour les taxonomies type tags
     // custom_taxonomy_slugdiv pour les taxonomies type categories
 }
@@ -205,62 +242,18 @@ function startup_cpt_menus_meta() {
 
 	$cmb_box = new_cmb2_box( array(
 		'id'            => $prefix . 'metabox',
-		'title'         => __( 'Menu details', 'startup-cpt-menus' ),
+		'title'         => __( 'Courses', 'startup-cpt-menus' ),
 		'object_types'  => array( 'menus' )
-	) );
-    
-    $cmb_box->add_field( array(
-		'name' => __( 'Main picture', 'startup-cpt-menus' ),
-		'desc' => __( 'Main image of the menu, may be different from the thumbnail. i.e. 5-course diner', 'startup-cpt-menus' ),
-		'id'   => $prefix . 'main_pic',
-		'type' => 'file',
-        // Optionally hide the text input for the url:
-        'options' => array(
-            'url' => false
-        )
-	) );
-    
-    $cmb_box->add_field( array(
-		'name' => __( 'Thumbnail', 'startup-cpt-menus' ),
-		'desc' => __( 'The menu picture on your website listings, if different from Main picture.', 'startup-cpt-menus' ),
-		'id'   => $prefix . 'thumbnail',
-		'type' => 'file',
-        // Optionally hide the text input for the url:
-        'options' => array(
-            'url' => false
-        )
-	) );
-
-	$cmb_box->add_field( array(
-		'name'       => __( 'Short description', 'startup-cpt-menus' ),
-		'desc'       => __( 'i.e. "French gourmet menu."', 'startup-cpt-menus' ),
-		'id'         => $prefix . 'short',
-		'type'       => 'text'
-	) );
-    
-    $cmb_box->add_field( array(
-		'name'     => __( 'Type', 'startup-cpt-menus' ),
-		'desc'     => __( 'Select the type(s) of the menu', 'startup-cpt-menus' ),
-		'id'       => $prefix . 'type',
-		'type'     => 'taxonomy_multicheck',
-		'taxonomy' => 'menu-type', // Taxonomy Slug
-		'inline'  => true // Toggles display to inline
-	) );
-    
-    $cmb_box->add_field( array(
-		'name'     => __( 'Company', 'startup-cpt-menus' ),
-		'id'       => $prefix . 'company',
-		'type'     => 'taxonomy_multicheck',
-		'taxonomy' => 'menu-company', // Taxonomy Slug
-		'inline'  => true // Toggles display to inline
 	) );
     
     $cmb_box->add_field( array(
 		'name'       => __( 'Inclusions', 'startup-cpt-menus' ),
 		'id'         => $prefix . 'inclusions',
 		'type'       => 'multicheck',
+        'inline'  => true, // Toggles display to inline
+        'select_all_button' => false,
         'options' => array(
-            'cocktail' => 'Cocktail local',
+            'cocktail' => 'Cocktail de bienvenue',
             'vin' => '1/2 bouteille de vin',
             'cheese' => 'Assiette de fromages fins',
             'digest' => 'Digestif',
@@ -448,9 +441,15 @@ function startup_cpt_menus_meta() {
 		'type'             => 'checkbox'
 	) );
     
+    $cmb_box = new_cmb2_box( array(
+		'id'            => $prefix . 'metabox2',
+		'title'         => __( 'Other menu types', 'startup-cpt-menus' ),
+		'object_types'  => array( 'menus' )
+	) );
+    
     $cmb_box->add_field( array(
-		'name'       => __( 'Autres types de menus', 'startup-cpt-menus' ),
-		'desc'       => __( 'Lunch boxes, bar, caterer...', 'startup-cpt-menus' ),
+//		'name'       => __( 'Content', 'startup-cpt-menus' ),
+		'desc'       => __( 'Use [strong] for titles, [list] for items, [italic] for description and [line] for separator', 'startup-cpt-menus' ),
 		'id'         => $prefix . 'others',
 		'type'    => 'wysiwyg',
         'options' => array(
@@ -468,16 +467,97 @@ function startup_cpt_menus_meta() {
         ),
 	) );
     
+    $cmb_box = new_cmb2_box( array(
+		'id'            => $prefix . 'metabox3',
+		'title'         => __( 'Footer notes', 'startup-cpt-menus' ),
+		'object_types'  => array( 'menus' )
+	) );
+    
     $cmb_box->add_field( array(
-		'name'       => __( 'Notes', 'startup-cpt-menus' ),
-		'id'         => $prefix . 'notes',
-		'type'       => 'textarea'
+		'name'       => __( 'On site', 'startup-cpt-menus' ),
+        'id'         => $prefix . 'notes_site',
+		'type'       => 'textarea_small'
+	) );
+    
+    $cmb_box->add_field( array(
+		'name'       => __( 'On portal', 'startup-cpt-menus' ),
+        'id'         => $prefix . 'notes_portal',
+		'type'       => 'textarea_small'
+	) );
+    
+    $cmb_box->add_field( array(
+		'name'       => __( 'On both', 'startup-cpt-menus' ),
+        'id'         => $prefix . 'notes',
+		'type'       => 'textarea_small'
+	) );
+    
+    $cmb_box = new_cmb2_box( array(
+		'id'            => $prefix . 'metabox4',
+		'title'         => __( 'Details', 'startup-cpt-menus' ),
+		'object_types'  => array( 'menus' ),
+        'context'      => 'side',
+		'priority'     => 'high',
+	) );
+    
+    $cmb_box->add_field( array(
+		'name'       => __( 'Short description', 'startup-cpt-menus' ),
+		'desc'       => __( 'i.e. "French gourmet menu."', 'startup-cpt-menus' ),
+		'id'         => $prefix . 'short',
+		'type'       => 'text'
 	) );
     
     $cmb_box->add_field( array(
 		'name'       => __( 'Price', 'startup-cpt-menus' ),
 		'id'         => $prefix . 'price',
 		'type'       => 'text'
+	) );
+    
+//    
+//    $cmb_box->add_field( array(
+//		'name' => __( 'Thumbnail', 'startup-cpt-menus' ),
+//		'desc' => __( 'The menu picture on your website listings, if different from Main picture.', 'startup-cpt-menus' ),
+//		'id'   => $prefix . 'thumbnail',
+//		'type' => 'file',
+//        // Optionally hide the text input for the url:
+//        'options' => array(
+//            'url' => false
+//        )
+//	) );
+//
+    
+    $cmb_box->add_field( array(
+		'name'     => __( 'Season', 'startup-cpt-menus' ),
+		'id'       => $prefix . 'season',
+		'type'     => 'taxonomy_multicheck',
+        'select_all_button' => false,
+		'taxonomy' => 'menu-season', // Taxonomy Slug
+	) );
+    
+    $cmb_box->add_field( array(
+		'name'     => __( 'Type', 'startup-cpt-menus' ),
+		'id'       => $prefix . 'type',
+		'type'     => 'taxonomy_multicheck',
+        'select_all_button' => false,
+		'taxonomy' => 'menu-type', // Taxonomy Slug
+	) );
+    
+    $cmb_box->add_field( array(
+		'name'     => __( 'Company', 'startup-cpt-menus' ),
+		'id'       => $prefix . 'company',
+		'type'     => 'taxonomy_multicheck',
+        'select_all_button' => false,
+		'taxonomy' => 'menu-company', // Taxonomy Slug
+	) );
+    
+    $cmb_box->add_field( array(
+		'name' => __( 'Main picture', 'startup-cpt-menus' ),
+//		'desc' => __( 'Main image of the menu, may be different from the thumbnail. i.e. 5-course diner', 'startup-cpt-menus' ),
+		'id'   => $prefix . 'main_pic',
+		'type' => 'file',
+        // Optionally hide the text input for the url:
+        'options' => array(
+            'url' => false
+        )
 	) );
     
 }
@@ -535,8 +615,46 @@ function startup_cpt_menus_shortcode_ui() {
         )
     );
 };
+
 if ( function_exists( 'shortcode_ui_register_for_shortcode' ) ) {
     add_action( 'init', 'startup_cpt_menus_shortcode_ui');
+}
+
+// Enqueue scripts and styles.
+function startup_cpt_menus_scripts() {
+    wp_enqueue_style( 'startup-cpt-menus-style', plugins_url( '/css/startup-cpt-menus.css', __FILE__ ), array( ), false, 'all' );
+}
+
+add_action( 'wp_enqueue_scripts', 'startup_cpt_menus_scripts', 15 );
+
+// Settings
+require('inc/settings.php');
+
+
+
+//////////////
+function randomString($length = 8) {
+	$str = "";
+	$characters = array_merge(range('A','Z'), range('a','z'), range('0','9'));
+	$max = count($characters) - 1;
+	for ($i = 0; $i < $length; $i++) {
+		$rand = mt_rand(0, $max);
+		$str .= $characters[$rand];
+	}
+	return $str;
+}
+
+
+add_filter( 'wp_unique_post_slug', 'custom_unique_post_slug', 10, 4 );
+function custom_unique_post_slug( $slug, $post_ID, $post_status, $post_type ) {
+    if ( "menus" == $post_type ) {
+        $post = get_post($post_ID);
+        if ( empty($post->post_name) || $slug != $post->post_name ) {
+            $slug = md5( time() );
+            $slug = substr($slug, 0, 10);
+        }
+    }
+    return $slug;
 }
 
 ?>
