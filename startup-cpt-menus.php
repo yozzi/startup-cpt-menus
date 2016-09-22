@@ -116,80 +116,8 @@ function startup_cpt_menus_caps() {
 
 register_activation_hook( __FILE__, 'startup_cpt_menus_caps' );
 
-// Menu types taxonomy
-function startup_reloaded_menu_types() {
-	$labels = array(
-		'name'                       => _x( 'Menu Types', 'Taxonomy General Name', 'startup-cpt-menus' ),
-		'singular_name'              => _x( 'Menu Type', 'Taxonomy Singular Name', 'startup-cpt-menus' ),
-		'menu_name'                  => __( 'Types', 'startup-cpt-menus' ),
-		'all_items'                  => __( 'All Types', 'startup-cpt-menus' ),
-		'parent_item'                => __( 'Parent Type', 'startup-cpt-menus' ),
-		'parent_item_colon'          => __( 'Parent Type:', 'startup-cpt-menus' ),
-		'new_item_name'              => __( 'New Type Name', 'startup-cpt-menus' ),
-		'add_new_item'               => __( 'Add New Type', 'startup-cpt-menus' ),
-		'edit_item'                  => __( 'Edit Type', 'startup-cpt-menus' ),
-		'update_item'                => __( 'Update Type', 'startup-cpt-menus' ),
-		'view_item'                  => __( 'View Type', 'startup-cpt-menus' ),
-		'separate_items_with_commas' => __( 'Separate types with commas', 'startup-cpt-menus' ),
-		'add_or_remove_items'        => __( 'Add or remove types', 'startup-cpt-menus' ),
-		'choose_from_most_used'      => __( 'Choose from the most used', 'startup-cpt-menus' ),
-		'popular_items'              => __( 'Popular Types', 'startup-cpt-menus' ),
-		'search_items'               => __( 'Search Types', 'startup-cpt-menus' ),
-		'not_found'                  => __( 'Not Found', 'startup-cpt-menus' )
-	);
-	$args = array(
-		'labels'                     => $labels,
-		'hierarchical'               => false,
-		'public'                     => true,
-		'show_ui'                    => true,
-		'show_admin_column'          => true,
-		'show_in_nav_menus'          => true,
-		'show_tagcloud'              => false
-	);
-	register_taxonomy( 'menu-type', array( 'menus' ), $args );
-
-}
-
-add_action( 'init', 'startup_reloaded_menu_types', 0 );
-
-// Menu company taxonomy
-function startup_reloaded_menu_company() {
-	$labels = array(
-		'name'                       => _x( 'Menu Companies', 'Taxonomy General Name', 'startup-cpt-menus' ),
-		'singular_name'              => _x( 'Menu Company', 'Taxonomy Singular Name', 'startup-cpt-menus' ),
-		'menu_name'                  => __( 'Companies', 'startup-cpt-menus' ),
-		'all_items'                  => __( 'All Companies', 'startup-cpt-menus' ),
-		'parent_item'                => __( 'Parent Company', 'startup-cpt-menus' ),
-		'parent_item_colon'          => __( 'Parent Company:', 'startup-cpt-menus' ),
-		'new_item_name'              => __( 'New Company Name', 'startup-cpt-menus' ),
-		'add_new_item'               => __( 'Add New Company', 'startup-cpt-menus' ),
-		'edit_item'                  => __( 'Edit Company', 'startup-cpt-menus' ),
-		'update_item'                => __( 'Update Company', 'startup-cpt-menus' ),
-		'view_item'                  => __( 'View Company', 'startup-cpt-menus' ),
-		'separate_items_with_commas' => __( 'Separate companies with commas', 'startup-cpt-menus' ),
-		'add_or_remove_items'        => __( 'Add or remove companies', 'startup-cpt-menus' ),
-		'choose_from_most_used'      => __( 'Choose from the most used', 'startup-cpt-menus' ),
-		'popular_items'              => __( 'Popular Companies', 'startup-cpt-menus' ),
-		'search_items'               => __( 'Search Companies', 'startup-cpt-menus' ),
-		'not_found'                  => __( 'Not Found', 'startup-cpt-menus' )
-	);
-	$args = array(
-		'labels'                     => $labels,
-		'hierarchical'               => false,
-		'public'                     => true,
-		'show_ui'                    => true,
-		'show_admin_column'          => true,
-		'show_in_nav_menus'          => true,
-		'show_tagcloud'              => false
-	);
-	register_taxonomy( 'menu-company', array( 'menus' ), $args );
-
-}
-
-add_action( 'init', 'startup_reloaded_menu_company', 0 );
-
 // Menu season taxonomy
-function startup_reloaded_menu_season() {
+function startup_cpt_menu_season() {
 	$labels = array(
 		'name'                       => _x( 'Menu Seasons', 'Taxonomy General Name', 'startup-cpt-menus' ),
 		'singular_name'              => _x( 'Menu Season', 'Taxonomy Singular Name', 'startup-cpt-menus' ),
@@ -222,10 +150,82 @@ function startup_reloaded_menu_season() {
 
 }
 
-add_action( 'init', 'startup_reloaded_menu_season', 0 );
+add_action( 'init', 'startup_cpt_menu_season', 0 );
+
+// Menu types taxonomy
+function startup_cpt_menu_types() {
+	$labels = array(
+		'name'                       => _x( 'Menu Types', 'Taxonomy General Name', 'startup-cpt-menus' ),
+		'singular_name'              => _x( 'Menu Type', 'Taxonomy Singular Name', 'startup-cpt-menus' ),
+		'menu_name'                  => __( 'Types', 'startup-cpt-menus' ),
+		'all_items'                  => __( 'All Types', 'startup-cpt-menus' ),
+		'parent_item'                => __( 'Parent Type', 'startup-cpt-menus' ),
+		'parent_item_colon'          => __( 'Parent Type:', 'startup-cpt-menus' ),
+		'new_item_name'              => __( 'New Type Name', 'startup-cpt-menus' ),
+		'add_new_item'               => __( 'Add New Type', 'startup-cpt-menus' ),
+		'edit_item'                  => __( 'Edit Type', 'startup-cpt-menus' ),
+		'update_item'                => __( 'Update Type', 'startup-cpt-menus' ),
+		'view_item'                  => __( 'View Type', 'startup-cpt-menus' ),
+		'separate_items_with_commas' => __( 'Separate types with commas', 'startup-cpt-menus' ),
+		'add_or_remove_items'        => __( 'Add or remove types', 'startup-cpt-menus' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'startup-cpt-menus' ),
+		'popular_items'              => __( 'Popular Types', 'startup-cpt-menus' ),
+		'search_items'               => __( 'Search Types', 'startup-cpt-menus' ),
+		'not_found'                  => __( 'Not Found', 'startup-cpt-menus' )
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => false,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => false
+	);
+	register_taxonomy( 'menu-type', array( 'menus' ), $args );
+
+}
+
+add_action( 'init', 'startup_cpt_menu_types', 0 );
+
+// Menu company taxonomy
+function startup_cpt_menu_company() {
+	$labels = array(
+		'name'                       => _x( 'Menu Companies', 'Taxonomy General Name', 'startup-cpt-menus' ),
+		'singular_name'              => _x( 'Menu Company', 'Taxonomy Singular Name', 'startup-cpt-menus' ),
+		'menu_name'                  => __( 'Companies', 'startup-cpt-menus' ),
+		'all_items'                  => __( 'All Companies', 'startup-cpt-menus' ),
+		'parent_item'                => __( 'Parent Company', 'startup-cpt-menus' ),
+		'parent_item_colon'          => __( 'Parent Company:', 'startup-cpt-menus' ),
+		'new_item_name'              => __( 'New Company Name', 'startup-cpt-menus' ),
+		'add_new_item'               => __( 'Add New Company', 'startup-cpt-menus' ),
+		'edit_item'                  => __( 'Edit Company', 'startup-cpt-menus' ),
+		'update_item'                => __( 'Update Company', 'startup-cpt-menus' ),
+		'view_item'                  => __( 'View Company', 'startup-cpt-menus' ),
+		'separate_items_with_commas' => __( 'Separate companies with commas', 'startup-cpt-menus' ),
+		'add_or_remove_items'        => __( 'Add or remove companies', 'startup-cpt-menus' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'startup-cpt-menus' ),
+		'popular_items'              => __( 'Popular Companies', 'startup-cpt-menus' ),
+		'search_items'               => __( 'Search Companies', 'startup-cpt-menus' ),
+		'not_found'                  => __( 'Not Found', 'startup-cpt-menus' )
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => false,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => false
+	);
+	register_taxonomy( 'menu-company', array( 'menus' ), $args );
+
+}
+
+add_action( 'init', 'startup_cpt_menu_company', 0 );
 
 // Retirer la boite de la taxonomie sur le coté
-function startup_reloaded_menu_types_metabox_remove() {
+function startup_cpt_menu_types_metabox_remove() {
 	remove_meta_box( 'tagsdiv-menu-type', 'menus', 'side' );
     remove_meta_box( 'tagsdiv-menu-company', 'menus', 'side' );
     remove_meta_box( 'tagsdiv-menu-season', 'menus', 'side' );
@@ -233,7 +233,7 @@ function startup_reloaded_menu_types_metabox_remove() {
     // custom_taxonomy_slugdiv pour les taxonomies type categories
 }
 
-add_action( 'admin_menu' , 'startup_reloaded_menu_types_metabox_remove' );
+add_action( 'admin_menu' , 'startup_cpt_menu_types_metabox_remove' );
 
 // Metaboxes
 function startup_cpt_menus_meta() {
@@ -575,7 +575,7 @@ function startup_cpt_menus_shortcode( $atts ) {
         ), $atts);
     
 	// Code
-    if ( function_exists( 'startup_reloaded_setup' ) ) {
+    if ( function_exists( 'startup_cpt_setup' ) ) {
         ob_start();
         require get_template_directory() . '/template-parts/content-menus.php';
     } else {
