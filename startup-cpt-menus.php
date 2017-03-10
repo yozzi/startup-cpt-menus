@@ -575,7 +575,7 @@ function startup_cpt_menus_shortcode( $atts ) {
         ), $atts);
     
 	// Code
-    if ( function_exists( 'startup_cpt_setup' ) ) {
+    if ( function_exists( 'startup_reloaded_setup' ) ) {
         ob_start();
         require get_template_directory() . '/template-parts/content-menus.php';
     } else {
