@@ -575,11 +575,11 @@ function startup_cpt_menus_shortcode( $atts ) {
         ), $atts);
     
 	// Code
-    if ( function_exists( 'startup_reloaded_setup' ) ) {
+    if ( function_exists( 'startup_reloaded_setup' ) || function_exists( 'startup_revolution_setup' ) ) {
         ob_start();
         require get_template_directory() . '/template-parts/content-menus.php';
     } else {
-        echo 'Should <a href="https://github.com/yozzi/startup-reloaded" target="_blank">install StartUp Reloaded Theme</a> to make things happen...';
+        echo 'You should install <a href="https://github.com/yozzi/startup-reloaded" target="_blank">StartUp Reloaded</a> or <a href="https://github.com/yozzi/startup-revolution" target="_blank">StartUp Revolution</a> theme to make things happen...';
     }
     return ob_get_clean();
 }
